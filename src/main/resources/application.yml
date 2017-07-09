@@ -1,0 +1,23 @@
+server:
+  context-path: /db-demo
+  port: 5678
+spring:
+  application:
+    name: embedded-db-demo
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3399/docker_command?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27011/command
+
+  redis:
+    url: redis://127.0.0.1:6399
+
+mongo:
+  db:
+    name: command
